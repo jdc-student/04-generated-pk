@@ -37,5 +37,20 @@ public class Product {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
+	
+	public void setCategoryId(int id) {
+		if(category == null) {
+			category = new Category();
+		}
+		
+		category.setId(id);
+	}
+	
+	public void setCategoryName(String name) {
+		if(category == null) {
+			category = new Category();
+		}
+		category.setName(name);
+	}
 
 }

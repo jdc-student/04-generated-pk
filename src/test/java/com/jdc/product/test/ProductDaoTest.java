@@ -43,14 +43,14 @@ public class ProductDaoTest {
 	@DisplayName("2. Find Product By Id")
 	void test2() {
 		 var p = pdao.findById(1);
-		 var c = cdao.findById(1);
+		 
 		 Assertions.assertNotNull(p);
-		 Assertions.assertEquals("Foods",c.getName());
+		 Assertions.assertEquals("Foods",p.getCategory().getName());
 		 
 		 Assertions.assertEquals("Lucky Cake", p.getName());		 
 		 Assertions.assertEquals(500,p.getPrice());
 		 
-		 Assertions.assertNull(pdao.findById(2));
+		 Assertions.assertEquals(0,pdao.findById(2));
 	}
 	
 	@Test
